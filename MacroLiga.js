@@ -240,8 +240,9 @@ function quantosMinutos(hora){
     
   
     var sslista = SpreadsheetApp.getActive().getSheetByName('Dados');
+    var ultNomes = sslista.getLastColumn();
     var ssJogadores = SpreadsheetApp.getActive().getSheetByName('Jogadores');
-    var nomesJogadores = sslista.getRange(1,5,1,18).getValues();
+    var nomesJogadores = sslista.getRange(1,5,1,ultNomes).getValues();
   
     var ssConvidados = SpreadsheetApp.getActive().getSheetByName('Convidados');
     var ssHoras = SpreadsheetApp.getActive().getSheetByName('Horas Adicionadas');
